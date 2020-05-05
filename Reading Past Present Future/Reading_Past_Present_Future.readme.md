@@ -27,7 +27,14 @@ I used GPT-2 to train my source data (txt) into a generative model that could gi
 
 ## The Past, Present, and Future Oracle
 
-The output is a program that has a black user interface, prompting you to click in order to 'see' as the querent and reader. Upon clicking with your mouse, you can see a glimpse into what the oracle is telling you. You'll notice that the text stops after it reaches the edge of the circle; to read on you'll have to click around to reveal more of the text. However, as you click further, you'll see that the text starts to overlap with the existing text on the screen, ultimately decreasing the readability. This is a pretty apt outcome, referring to that trying to read too much into oracles often confuses the querent. 
+The output is a program that has a black user interface, prompting you to click in order to 'see' as the querent and reader. Upon clicking with your mouse, you can see a glimpse into what the oracle is telling you. You'll notice that the text stops after it reaches the edge of the circle; to read on you'll have to click around to reveal more of the text. 
+
+However, as you click further, you'll see that the text starts to overlap with the existing text on the screen, ultimately decreasing the readability. This is a pretty apt outcome, referring to that trying to read too much into oracles often confuses the querent. 
 
 There are three main options you have with the oracle: Past, Present, and Future. Selecting each will give you different types of readings that correspond to your wish.
 
+
+![The Output Screenshot 1](https://github.com/lynneyun/Electronic-Rituals/blob/master/Reading%20Past%20Present%20Future/PPF_screenshot1.png?raw=true)
+![The Output Screenshot 2](https://github.com/lynneyun/Electronic-Rituals/blob/master/Reading%20Past%20Present%20Future/PPF_screenshot2.png?raw=true)
+
+![The Output Screenshot 3](https://github.com/lynneyun/Electronic-Rituals/blob/master/Reading%20Past%20Present%20Future/PPF_screenshot3.png?raw=true)
