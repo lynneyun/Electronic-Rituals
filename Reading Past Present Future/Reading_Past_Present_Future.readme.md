@@ -25,19 +25,9 @@ I used a Keylogger program named [Elite Keylogger](https://www.elitekeyloggers.c
 
 I used GPT-2 to train my source data (txt) into a generative model that could give me paragraphs with these three prompts: "In the past, ", "In the present", and "In the future, ".
 
-## The Output 
+## The Past, Present, and Future Oracle
 
-The output is a program that has a black user interface, prompting you to 
+The output is a program that has a black user interface, prompting you to click in order to 'see' as the querent and reader. Upon clicking with your mouse, you can see a glimpse into what the oracle is telling you. You'll notice that the text stops after it reaches the edge of the circle; to read on you'll have to click around to reveal more of the text. However, as you click further, you'll see that the text starts to overlap with the existing text on the screen, ultimately decreasing the readability. This is a pretty apt outcome, referring to that trying to read too much into oracles often confuses the querent. 
 
-## Major Q: What do I want to predict? ##
+There are three main options you have with the oracle: Past, Present, and Future. Selecting each will give you different types of readings that correspond to your wish.
 
-I could make this into a random generator that produces an opaque-style oracle, something that needs to be interpreted for the meaning. Alternatively, I could just use data in a somewhat legible way to predict what I will be doing. 
-
-## Some thoughts and memos via class 4/21/2020 ##
-
-- Maybe what this is now missing is a formal process. Look through the methods that have been covered in the semester thus far. Who is the 'reader', who is the 'sitter'? 
-- What constitutes 'meaning'?
-
-## Some other thoughts after a week
-- what does it mean to be self-surveilling? Doesn't religion talk about the all-knowing (or at least Santa Claus who claims to know everything naughty and good)? What makes predictive systems accurate? Is it the amount of data that is input? What makes us believe in these predictive systems? The amounts of data we put in? Our gullibility? Our belief systems?
-- think about the querent and reader. Who is who? What is the role of the machine?
