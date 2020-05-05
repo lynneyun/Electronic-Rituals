@@ -4,18 +4,6 @@ from PyQt5.QtGui import QImage, QFont, QPainter, QBrush, QPen, QColor
 from PyQt5.QtCore import QRect, Qt, QPoint, QTimer
 import math
 
-# f = open("past.txt", 'r')
-# past = f.read()
-# f.close()
-
-# f = open("present.txt", 'r')
-# present = f.read()
-# f.close()
-
-# f = open("future.txt", 'r')
-# future = f.read()
-# f.close()
-
 
 class Window(QMainWindow):
 
@@ -31,7 +19,6 @@ class Window(QMainWindow):
 		self.image.fill(Qt.black)
 		self.top_image = QImage(self.size(), QImage.Format_ARGB32)
 		self.top_image.fill(QColor(0,0,0,0))
-		# self.merge_image = QImage(self.size(), QImage.Format_ARGB32)
 
 		self.font = QFont("IBM Plex Mono",16) 
 		self.font.setStyleHint(QFont.TypeWriter)
@@ -65,11 +52,6 @@ class Window(QMainWindow):
 		fileMenu = mainMenu.addMenu("File")
 		oracle_mode = mainMenu.addMenu("Oracle Mode")
 
-		saveAction = QAction("Save",self)
-		saveAction.setShortcut("Ctrl+S")
-		fileMenu.addAction(saveAction)
-		saveAction.triggered.connect(self.save)
-
 		clearAction = QAction("Clear", self)
 		clearAction.setShortcut("Ctrl+C")
 		fileMenu.addAction(clearAction)
@@ -89,6 +71,7 @@ class Window(QMainWindow):
 
 		self.state = self.present
 
+	# This is also an artifact left over, wanted to have the timer do something (like ripple effect) but didn't figure it out 
 	def showTime(self):
 		self.timer_count += 1
 		print(self.timer_count)
@@ -97,13 +80,11 @@ class Window(QMainWindow):
 
 	def paintEvent(self,event):
 
-		# # if self.timer_count == 0:
-		# # 	self.grid_init()
-
-
 		painter = QPainter(self)
 		painter.drawImage(self.rect(), self.image)
 		painter.drawImage(self.rect(),self.top_image)
+
+	## Artifact left over, the program used to have a starting grid
 
 	# def grid_init(self):
 	# 	canvas = QPainter(self)
@@ -120,22 +101,20 @@ class Window(QMainWindow):
 	def mousePressEvent(self, event):
 
 		if (event.buttons() == Qt.LeftButton):
-			# print(self.char_count)
 			self.lastPoint = event.pos()
 			x = event.pos().x()
 			y = event.pos().y()
-			# print(self.lastPoint)
 			brush_radius = 180
 			canvas = QPainter(self.top_image)
 			canvas.drawImage(self.rect(), self.top_image)
-			# canvas.drawText(event.pos().x()-event.pos().x()%20,event.pos().y()-event.pos().y()%20,content[1260+self.char_count]) #1260 is taken from after canvas.drawText function
-			# print(self.char_count)
 
 			minx = self.toGrid(x - brush_radius)
 			maxx = self.toGrid(x + brush_radius)
 			miny = self.toGrid(y - brush_radius)
 			maxy = self.toGrid(y + brush_radius)
 
+			# note: Kevin Yeh helped out with the maths to draw type in circle.. 
+			# still can't figure out why the 'oops' is happening though
 			for circle_y in range(miny, maxy, 20):
 
 				try:
@@ -160,17 +139,6 @@ class Window(QMainWindow):
 	def toGrid(self, val):
 		return val - (val % 20)
 
-	def save(self):
-		filePath, _ = QFileDialog.getSaveFileName(self, "Save Image", "", "PNG(*.png);;JPEG(*.jpg *.jpeg);;All Files(*.*) ")
-
-		if filePath == "":
-			return
-
-		# merge_image = QImage(self.size(), QImage.Format_ARGB32)
-		# painter = QPainter(self)
-		# painter.drawImage(self.rect(), self.image)
-		# painter.drawImage(self.rect(),self.top_image)
-		merge_image.save(filePath)
 
 	def clear(self):
 		self.top_image.fill(QColor(0,0,0,0))
