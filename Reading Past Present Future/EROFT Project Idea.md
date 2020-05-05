@@ -43,3 +43,12 @@ Largely, these data points end up being either text-based or image based. This g
 ## Major Q: What do I want to predict? ##
 
 I could make this into a random generator that produces an opaque-style oracle, something that needs to be interpreted for the meaning. Alternatively, I could just use data in a somewhat legible way to predict what I will be doing. 
+
+## Some thoughts and memos via class 4/21/2020 ##
+
+- Maybe what this is now missing is a formal process. Look through the methods that have been covered in the semester thus far. Who is the 'reader', who is the 'sitter'? 
+- What constitutes 'meaning'?
+
+## Some other thoughts after a week
+- what does it mean to be self-surveilling? Doesn't religion talk about the all-knowing (or at least Santa Claus who claims to know everything naughty and good)? What makes predictive systems accurate? Is it the amount of data that is input? What makes us believe in these predictive systems? The amounts of data we put in? Our gullibility? Our belief systems?
+- think about the querent and reader. Who is who? What is the role of the machine?
